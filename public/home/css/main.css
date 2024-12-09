@@ -1,0 +1,170 @@
+/* ! global css */
+@import url(base.css);
+
+/* ! layout */
+@import url(layout/header.css);
+@import url(layout/footer.css);
+
+/* ! components */
+@import url(components/modal-search.css);
+@import url(components/modal-dialog.css);
+@import url(components/slider.css);
+@import url(components/category-item.css);
+@import url(components/product-item.css);
+@import url(components/campaign-item.css);
+@import url(components/blog-item.css);
+@import url(components/brand-item.css);
+@import url(components/campaign-single.css);
+@import url(components/single-products/breadcrumb.css);
+@import url(components/single-products/product-gallery.css);
+@import url(components/single-products/product-info.css);
+@import url(components/single-products/product-tabs.css);
+@import url(components/reviews.css);
+
+/* ! pages */
+@import url(pages/home.css);
+@import url(pages/contact.css);
+@import url(pages/account.css);
+@import url(pages/cart.css);
+@import url(pages/single-product.css);
+@import url(pages/blog.css);
+@import url(pages/single-blog.css);
+
+
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border box;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+    
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+#product1 {
+    text-align: center;
+
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro{
+    width: 30%;
+    min-width: 200px;
+    padding: 40px 5px;
+    border: 1px solid #2e2e2e;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(255, 0, 0, 0.02);
+    margin: 10px 0;
+}
+
+#product .pro img{
+    width: 30%;
+    border-radius: 20px;
+}
+
+.pro-link {
+    display: block;
+    text-decoration: none;
+}
+
+#product1 .pro .des{
+    text-align: center;
+    padding: 10px 0;
+}
+
+#product1 .pro .des span{
+    color: #060606;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #088178;
+
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s;
+}
+
+.remove-btn:hover {
+    color: #cc0000;
+}
+
+.product-remove {
+    text-align: center;
+    
+}
+
+label {
+    background-color: white;
+    display: -webkit-flex;
+}
+
+.favContainer input[type="checkbox"] {
+    display: none;
+}
+
+.favContainer svg {
+    stroke: black;
+    stroke-width: 2;
+    fill: white;
+}
+
+.favContainer input[type="checkbox"]:checked + label svg {
+    stroke: black;
+    fill: red;
+}
+
+.action {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.option-1, .option-2 {
+    display: none;
+}
+
+/* Show "Add to Favorites" when unchecked */
+.favContainer input[type="checkbox"]:not(:checked) + label .option-1 {
+    display: inline-block;
+}
+
+/* Show "Added to Favorites" when checked */
+.favContainer input[type="checkbox"]:checked + label .option-2 {
+    display: inline-block;
+}
+
+
