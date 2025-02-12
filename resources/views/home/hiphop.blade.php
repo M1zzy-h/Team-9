@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <!-- !Glide.js Css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
-  <link rel="stylesheet" href="home/css/main.css" />
-  <title>E-Commerce | Home</title>
+  <link rel="stylesheet" href="{{ asset('home/css/main.css') }}" />
+  <title>E-Commerce | Hip Hop</title>
 </head>
 
 <body>
@@ -62,250 +62,25 @@
 
  
   <section id="product1" class="section-p1">
- 
-
-    <div class="pro-container">
-
-        <div class="pro">
-            <a href="\product">
-                <img src="home/img/features/jBadass.jpg" alt="">
-            </a>
-            <div class="des">
-                <a href="\product">
-                    <span>Joey Bada$$</span>
-                </a>
-                <h5>1999</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£32</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
+    <div class="container">
+      <h2 class="section-title">Hip Hop</h2>
+      <p class="section-description">Latest Hip Hop Products</p>
+      <div class="product-grid">
+        @foreach($hiphopProducts as $id => $product)
+          <div class="product-card" onclick="window.location.href='{{ url('product/' . $id) }}';">
+            <div class="product-image">
+              <img src="{{ asset($product['image']) }}" alt="{{ $product['title'] }}">
             </div>
-        </div>
-
-
-
-        <div class="pro">
-            <a href= "\product4">
-                <img src="home/img/features/callMe.jpg" alt="">
-            </a>
-            <div class="des">
-                <a href= "\product4">
-                    <span>Tyler The Creator</span>
-                </a>
-                <h5>Call Me If you Get Lost</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£76</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
+            <div class="product-details">
+              <h3 class="artist-name">{{ $product['artist'] }}</h3>
+              <h4 class="album-title">{{ $product['title'] }}</h4>
+              <div class="price">{{ $product['price'] }}</div>
             </div>
-        </div>
-
-
-        <div class="pro">
-            <a href="\product5">
-                <img src="home/img/features/IGOR.jpg" alt="">
-            </a>
-            <div class="des">
-                <a href="\product5">
-                    <span>Tyler The Creator</span>
-                </a>
-                <h5>IGOR</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£64</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-  
-
-
-
-        <div class="pro">
-            <a href="/product11">
-            <img src="home/img/features/DAMN.jpg" alt="">
-            <div class="des">
-                <a href="/product11">
-                <span>Kendrick Lamar</span>
-            </a>
-                <h5>DAMN</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£60</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-        <div class="pro">
-            <a href="\product12">
-            <img src="home/img/features/21.jpg" alt="">
-            <div class="des">
-                <a href="\product12">
-                <span>21 Savage</span>
-            </a>
-                <h5>American Dream</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£25</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-        <div class="pro">
-            <a href="\product13">
-            <img src="home/img/features/misseducation.jpg" alt="">
-            <div class="des">
-                <a href="\product13">
-                <span>Lauryn Hill</span>
-            </a>
-                <h5>The Misseducation Of Lauryn Hill</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£56</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-        <div class="pro">
-            <a href="\product14">
-            <img src="home/img/features/astro.jpg" alt="">
-            <div class="des">
-                <a href="\product14">
-                <span>Travis Scott</span>
-            </a>
-                <h5>ASTROWORLD</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£60</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-
-        <div class="pro">
-            <a href="\product16">
-            <img src="home/img/features/FOOD.jpg" alt="">
-            <div class="des">
-                <a href="\product16">
-                <span>MF DOOM</span>
-            </a>
-                <h5>MM.. FOOD</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£41</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-        <div class="pro">
-            <a href="\product17">
-            <img src="home/img/features/devine.jpg" alt="">
-            <div class="des">
-                <a href="\product17">
-                <span>Mac Miller</span>
-            </a>
-                <h5>The Devine Femanine</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£55</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-        <div class="pro">
-            <a href="\product18">
-            <img src="home/img/features/twistedFantasy.jpg" alt="">
-            <div class="des">
-                <a href="\product18">
-                <span>Kanye West</span>
-            </a>
-                <h5>My Dark Twisted Fantasy</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£30</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-
-
-
-        <div class="pro">
-            <a href="\product20">
-            <img src="home/img/features/YE.jpg" alt="">
-            <div class="des">
-                <a href="\product20">
-                <span>Kanye West</span>
-            </a>
-                <h5>YE [SIGNED]</h5>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h4>£299</h4>
-                <a href="#"><i class="fal fa-shopping cart"></i></a>
-            </div>
-        </div>
-</section>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  >
 
 <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <title>E-Commerce | Product</title>
     <!-- !bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="home/css/main.css" />
+    <link rel="stylesheet" href="{{ asset('home/css/main.css') }}" />
 
 </head>
 
@@ -16,6 +16,29 @@
     <!-- ! main-navigation header -->
     @include('home.header')
   <!--main-navigation header end -->
+
+  <div class="modal-search">
+    <div class="modal-wrapper">
+      <h3 class="modal-title">Search for products</h3>
+      <p class="modal-text">
+        Start typing to see products you are looking for.
+      </p>
+      <div class="search">
+        <input type="text" placeholder="Search a product" />
+        <button><i class="bi bi-search"></i></button>
+      </div>
+      </form>
+      <div class="search-result">
+        <div class="search-heading">
+          <h3>RESULT FROM PRODUCT</h3>
+        </div>
+        <div class="results">
+
+        </div>
+      </div>
+      <i class="bi bi-x-circle" id="close-modal-search"></i>
+    </div>
+  </div>
 
     <!-- product start -->
     <section class="single-product">
@@ -30,14 +53,14 @@
              
                 <div class="single-content">
                     <main class="site-main">
-                        <div class="product-gallery ">
+                        <div class="product-gallery">
                             <div class="single-image-wrapper">
-                                <img src="home\img\product images/1999.jpg" id="single-image" alt="">
+                                <img src="{{ asset($product->image) }}" id="single-image" alt="{{ $product->title }}">
                             </div>
                         </div>
                         <div class="product-info">
-                            <h2 class="product-title">1999</h2>
-                            <h3>Joey Bada$$</h3>
+                            <h2 class="product-title">{{ $product->title }}</h2>
+                            <h3>{{ $product->artist }}</h3>
                             <div class="product-review">
                                 <ul class="product-star">
                                     <li><i class="bi bi-star-fill"></i></li>
@@ -49,30 +72,28 @@
                                 <span>2 reviews</span>
                             </div>
                             <div class="product-price">
-                                <h1>£32</h1>
+                                <h1>{{ $product->price }}</h1>
 
 
                                 <div class="favContainer">
-                                  <input type="checkbox" checked = "checked" id = "favorite" name = "favorite-checkbox" value="favorite-button">
-                                  <label for = "favorite" class = "container">
-                                    <svg xmlns = "https://www.w3.org/2000/svg" width = "24" height = "24" viewbox = "0 0 24
-                                    " fill = "none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="feather feather-heart">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"></path>
-                                    
-                                    <div class="action">
+                                  <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button">
+                                  <label for="favorite" class="container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                         class="feather feather-heart">
+                                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78z"></path>
+
+                                      <div class="action">
                                       <span class="option-1">Add to Favorites</span>
                                       <span class="option-2">Added to Favorites</span>
                                     </div>
-                  
-                                      </svg>
-                                    </label>
-                                    </div>
+                                    </svg>
+                                  </label>
+                                  </div>
                             </div>
 
                             <div class="album-description">
-                                   <p>The debut mixtape from Pro Era crew member and Brooklyn MC, Joey Bada$$. Leaning into the golden era sound of hip-hop, Joey Bada$$ garnered widespread acclaim from some of Hip-Hop's most vaunted tastemakers by crafting a project that paid homage to the '90s, despite only being 17 years old at the time. With the standout tracks, 'Waves', 'Survival Tactics', and 'Snakes', the 15 track album features production from Chuck Strangers, Lord Finesse, MF Doom, and J Dilla, as well as guest appearances from Pro Era members Kirk Knight, CJ Fly, Nyck Caution, Rokamouth, Dessy Hinds, Dyemond Lewis, T'nah Apex & the late Capital STEEZ. Pro Era Forever.</p>
+                                   <p>{{ $product->description }}</p>
                                    </div>
                             
                             <form action="" class="variations-form">
@@ -87,11 +108,9 @@
                                         </div>
                                         
                                         <p class="product-description">
-                                            Product Dimensions ‏ : ‎ 31 x 1 x 31 cm; 382 g<br>
-                                            Manufacturer ‏ : ‎ Pro Era / Empire<br>
-                                            Manufacturer reference ‏ : ‎ HB3TV2-GCEB-00<br>
-                                            Label ‏ : ‎ Pro Era / Empire
-                                            Number of discs ‏ : ‎ 2
+                                            @foreach($product->details as $label => $value)
+                                                {{ $label }} ‏ : ‎ {{ $value }}<br>
+                                            @endforeach
                                         </p>
                                 </div>
                             </form>
@@ -102,12 +121,16 @@
                 </div>
 
                 <!-- product ending -->
-
-        
-  <script src = "home/js/cart.js"></script>             
+               
+            </div>
+        </div>
+    </section>
+    @include('home.footer')
+  <script src="{{ asset('home/js/main.js') }}" type="module"></script>
+  <script src="{{ asset('home/js/cart.js') }}" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script src="{{ asset('home/js/glide.js') }}" type="module"></script>
   
 </body>
-
-
 
 </html>

@@ -1,93 +1,58 @@
 function searchFunc(data) {
     const searchWrapper = document.querySelector(".search-result .results")
     let result = ""
-    data.forEach((item) => {
+
+    // Build an initial list of search results.
+    // If the product object does not already have an "id" property,
+    // we use the array index as the fallback.
+    data.forEach((item, index) => {
+        const productId = item.id !== undefined ? item.id : index;
         result += `
-                    <a href="#" class="result-item" data-id="${item.id}">
-                        <img src="${item.img.singleImage}" class="search-thumb" alt="">
+                    <a href="/product/${productId}" class="result-item" data-id="${productId}">
+                        <img src="${item.image}" class="search-thumb" alt="${item.title}">
                         <div class="search-info">
-                        <h4>${item.name}</h4>
-                        <span class="search-sku">SKU : PD0016</span>
-                        <span class="search-price">$${(item.price.newPrice).toFixed(2)}</span>
+                        <h4>${item.title}</h4>
+                        <span class="search-artist">${item.artist}</span>
+                        <span class="search-price">${item.price}</span>
                         </div>  
                     </a>    
                 `
     })
     searchWrapper.innerHTML = result
-    searchRouter()
 
     const searchInput = document.querySelector(".modal-search .search input")
-    let value = ""
-    let filtered = []
 
+    // Listen for input changes to filter products dynamically.
     searchInput.addEventListener("input", (e) => {
-        value = (e.target.value).trim().toLowerCase()
-        filtered = data.filter((item) => item.name.trim().toLowerCase().includes(value))
+        const value = e.target.value.trim().toLowerCase()
+        let filtered = data.filter((item) => 
+            item.title.toLowerCase().includes(value) ||
+            item.artist.toLowerCase().includes(value)
+        )
         let result = ""
-
-
-        if (filtered.length > 1) {
-            filtered.forEach((item) => {
+        if (filtered.length > 0) {
+            filtered.forEach((item, index) => {
+                const productId = item.id !== undefined ? item.id : index;
                 result += `
-                        <a href="#" class="result-item" data-id="${item.id}">
-                            <img src="${item.img.singleImage}" class="search-thumb" alt="">
+                        <a href="/product/${productId}" class="result-item" data-id="${productId}">
+                            <img src="${item.image}" class="search-thumb" alt="${item.title}">
                             <div class="search-info">
-                            <h4>${item.name}</h4>
-                            <span class="search-sku">SKU : PD0016</span>
-                            <span class="search-price">$${(item.price.newPrice).toFixed(2)}</span>
+                            <h4>${item.title}</h4>
+                            <span class="search-artist">${item.artist}</span>
+                            <span class="search-price">${item.price}</span>
                             </div>  
                         </a>    
                     `
             })
-            searchWrapper.innerHTML = result
-
-
-        } else if (filtered.length < 2) {
-
-            if (filtered == 0) {
-                searchWrapper.innerHTML = `
-                                            <a href="/" class="result-item" style="justify-content: center">
-                                            😔Aradığınız Ürün Bulunamadı😔
-                                            </a>
-                                        `
-            } else {
-                filtered.forEach((item) => {
-                    result += `
-                        <a href="#" class="result-item" data-id="${item.id}">
-                            <img src="${item.img.singleImage}" class="search-thumb" alt="">
-                            <div class="search-info">
-                            <h4>${item.name}</h4>
-                            <span class="search-sku">SKU : PD0016</span>
-                            <span class="search-price">$${(item.price.newPrice).toFixed(2)}</span>
-                            </div>  
-                        </a>    
-                    `
-                })
-                searchWrapper.innerHTML = result
-
-            }
-
+        } else {
+            result = `
+                <a href="/" class="result-item" style="justify-content: center">
+                    😔 Aradığınız Ürün Bulunamadı 😔
+                </a>
+            `
         }
-
-        searchRouter()
-
-    })
-
-}
-
-function searchRouter() {
-    let searchRoute = document.querySelectorAll(".results .result-item")
-    searchRoute.forEach((item) => {
-        item.addEventListener("click", () => {
-            const id = item.dataset.id
-            if (id) {
-                localStorage.setItem("productId", Number(id))
-                window.location.href = "single-product.html"
-            }
-        })
+        searchWrapper.innerHTML = result
     })
 }
-
-
 
 export default searchFunc

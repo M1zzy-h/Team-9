@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <!-- !Glide.js Css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
-  <link rel="stylesheet" href="home/css/main.css" />
-  <title>E-Commerce | Home</title>
+  <link rel="stylesheet" href="{{ asset('home/css/main.css') }}" />
+  <title>E-Commerce | Pop</title>
 </head>
 
 <body>
@@ -61,174 +61,25 @@
 
  
   <section id="product1" class="section-p1">
-
-
-    <div class="pro-container">
-
- 
-      
-
-    <div class="pro">
-        <a href="\product2">
-            <img src="home/img/features/rumours.jpg" alt="">
-        </a>
-        <div class="des">
-            <a href= "\product2">
-                <span>Fleetwood Mac</span>
-            </a>
-            <h5>Rumours</h5>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+    <div class="container">
+      <h2 class="section-title">Pop</h2>
+      <p class="section-description">Latest Pop Products</p>
+      <div class="product-grid">
+      @foreach($popProducts as $id => $product)
+          <div class="product-card" onclick="window.location.href='{{ url('product/' . $id) }}';">
+            <div class="product-image">
+              <img src="{{ asset($product['image']) }}" alt="{{ $product['title'] }}">
             </div>
-            <h4>£56</h4>
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
-    </div>
-
-
-    <div class="pro">
-        <a href= "\product3">
-            <img src="home/img/features/bornTdie.jpg" alt="">
-        </a>
-        <div class="des">
-            <a href= "product3">
-                <span>Lana Del Rey</span>
-            </a>
-            <h5>Born To Die</h5>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
+            <div class="product-details">
+              <h3 class="artist-name">{{ $product['artist'] }}</h3>
+              <h4 class="album-title">{{ $product['title'] }}</h4>
+              <div class="price">{{ $product['price'] }}</div>
             </div>
-            <h4>£25</h4>
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
+          </div>
+        @endforeach
+      </div>
     </div>
-
-
-    <div class="pro">
-        <a href="\product6">
-            <img src="home/img/features/1989.jpg" alt="">
-        </a>
-        <div class="des">
-            <a href="product6">
-                <span>Taylor Swift</span>
-            </a>
-            <h5>1989</h5>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h4>£19</h4>
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
-    </div>
-
-
-
-    <div class="pro">
-        <a href="\product8">
-            <img src="home/img/features/StickSeason.jpg" alt="">
-        
-        <div class="des">
-            <span>Noah Kahan</span>
-        </a>
-            <h5>Stick Season</h5>
-        
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h4>£35</h4>
-        
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
-    </div>
-
-
-
-
-    <div class="pro">
-        <a href="\product17">
-        <img src="home/img/features/devine.jpg" alt="">
-        <div class="des">
-            <span>Mac Miller</span>
-        </a>
-            <h5>The Devine Femanine</h5>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h4>£55</h4>
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
-    </div>
-
-
-
-    <div class="pro">
-        <a href="\product19">
-        <img src="home/img/features/gemini.jpg" alt="">
-        <div class="des">
-            <span>Steve Lacy</span>
-        </a>
-            <h5>Gemini Rights</h5>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h4>£30</h4>
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
-    </div>
-
-
-
-    <div class="pro">
-        <a href="\product21">
-        <img src="home/img/features/wiped.jpg" alt="">
-        <div class="des">
-            <span>The Neighbourhood</span>
-        </a>
-            <h5>Wiped Out!</h5>
-            <div class="star">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-            </div>
-            <h4>£20</h4>
-            <a href="#"><i class="fal fa-shopping cart"></i></a>
-        </div>
-    </div>
-</div>
-
-
- 
-    
-    
-
-    
-</section>
+  </section>
 
 
 

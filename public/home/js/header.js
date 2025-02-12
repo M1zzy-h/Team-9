@@ -51,9 +51,33 @@ function searchModalFunc() {
     /* click outside end */
 }
 
+function themeToggleFunc() {
+    const themeToggle = document.querySelector("#theme-toggle");
+    const icon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateIcon(currentTheme);
+    
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateIcon(newTheme);
+    });
+    
+    function updateIcon(theme) {
+        icon.className = theme === 'light' ? 'bi bi-moon' : 'bi bi-sun';
+    }
+}
+
 function headerFunc() {
     sidebarFunc()
     searchModalFunc()
+    themeToggleFunc()
 }
 
 export default headerFunc()

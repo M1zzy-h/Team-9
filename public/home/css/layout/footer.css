@@ -22,6 +22,7 @@
     max-width: 500px;
     font-weight: 500;
     line-height: 1.2;
+    color: white;
 }
 
 
@@ -64,6 +65,7 @@
     color: #75767c;
     margin-top: 5px;
     font-weight: 500;
+    color: var(--text-color);
 }
 
 .footer .footer-contact-bottom .download-app {
@@ -79,7 +81,7 @@
 /* ! widgets start */
 .widgets-row {
     padding: 60px 0;
-    border: 1px solid #dee0ea;
+    /*border: 1px solid #dee0ea;*/
 }
 
 .widgets-row .footer-widgets {
@@ -91,6 +93,7 @@
 
 .widgets-row .footer-widgets>div {
     flex: 1;
+    
 }
 
 .widgets-row .footer-widgets .brand-info {
@@ -103,8 +106,13 @@
     margin: 15px 0;
 }
 
+.footer-contact-link{
+    color: var(--text-color);
+}
+
 .footer-widgets .brand-info .footer-contact {
     font-size: 14px;
+    color:var(--text-color);
 }
 
 .footer-widgets .widget-nav-menu h4 {
@@ -122,6 +130,7 @@
 
 .footer-widgets .widget-nav-menu ul li a {
     transition: .2s ease all;
+    color: var(--text-color);
 }
 
 
@@ -154,11 +163,15 @@
     align-items: center;
     font-size: 12px;
     column-gap: 10px;
+    color: var(--text-color);
+
 }
 
 .footer-copyright .footer-menu-list .list-item:not(:last-child) {
     padding-right: 10px;
     border-right: 1px solid #dee0ea;
+    color: var(--text-color);
+
 }
 
 /*! copyright end  */

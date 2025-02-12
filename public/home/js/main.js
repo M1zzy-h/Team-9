@@ -6,7 +6,7 @@ import searchFunc from "./search.js"
 
 (async function () {
 
-    const products = await fetch("js/data.json") //get data
+    const products = await fetch("/home/js/data.json") //get data
     const data = await products.json() // to json
 
 

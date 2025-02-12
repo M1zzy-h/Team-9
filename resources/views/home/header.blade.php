@@ -8,7 +8,7 @@
             <i class="bi bi-list" id="btn-menu"></i>
           </div>
           <div class="header-left">
-          <a href="#"><img src="home/img/logo.png" class="logo" alt=""></a>
+          <a href="#"><img src="{{ asset('home/img/logo.png') }}" class="logo" alt=""></a>
           </div>
           <div class="header-center" id="sidebar">
             <nav class="navigation">
@@ -32,6 +32,9 @@
           </div>
           <div class="header-right">
             <div class="header-right-links">
+              <button class="theme-toggle" id="theme-toggle">
+                  <i class="bi bi-sun"></i>
+              </button>
               <a href="/account">
                 <i class="bi bi-person"></i>
               </a>

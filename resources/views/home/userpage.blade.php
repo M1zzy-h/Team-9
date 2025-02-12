@@ -43,9 +43,9 @@
   <section class="campaign-single">
     <div class="container">
       <div class="campaign-wrapper">
-        <h2>New Season Sale</h2>
-        <strong>40% OFF</strong>
-        <span></span>
+        <h2 class="campaign-title">New Season Sale</h2>
+        <strong class="campaign-discount">40% OFF</strong>
+        <span class="campaign-desc"></span>
         <a href="/shop" class="btn btn-lg">
           SHOP NOW
           <i class="bi bi-arrow-right"></i>

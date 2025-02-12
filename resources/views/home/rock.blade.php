@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <!-- !Glide.js Css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
-  <link rel="stylesheet" href="home/css/main.css" />
-  <title>E-Commerce | Home</title>
+  <link rel="stylesheet" href="{{ asset('home/css/main.css') }}" />
+  <title>E-Commerce | Rock</title>
 </head>
 
 <body>
@@ -60,128 +60,27 @@
 
 
 
- 
+
   <section id="product1" class="section-p1">
-
-
-    <div class="pro-container">
-
-    
-            <div class="pro">
-                <a href="\product2">
-                    <img src="home/img/features/rumours.jpg" alt="">
-                </a>
-                <div class="des">
-                    <a href= "\product2">
-                        <span>Fleetwood Mac</span>
-                    </a>
-                    <h5>Rumours</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>£56</h4>
-                    <a href="#"><i class="fal fa-shopping cart"></i></a>
-                </div>
+    <div class="container">
+      <h2 class="section-title">Rock</h2>
+      <p class="section-description">Latest Rock Products</p>
+      <div class="product-grid">
+      @foreach($rockProducts as $id => $product)
+          <div class="product-card" onclick="window.location.href='{{ url('product/' . $id) }}';">
+            <div class="product-image">
+              <img src="{{ asset($product['image']) }}" alt="{{ $product['title'] }}">
             </div>
-    
-    
-    
-    
-    
-     
-    
-          
-    
-            <div class="pro">
-                <a href="\product7">
-                    <img src="home/img/features/EverybodyIs.jpg" alt="">
-                </a>
-                <div class="des">
-                    <a href="\product7">
-                        <span>The Cranberries</span>
-                    </a>
-                    <h5>Everybody else is doing it, so why can't we</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>£60</h4>
-                    <a href="#"><i class="fal fa-shopping cart"></i></a>
-                </div>
+            <div class="product-details">
+              <h3 class="artist-name">{{ $product['artist'] }}</h3>
+              <h4 class="album-title">{{ $product['title'] }}</h4>
+              <div class="price">{{ $product['price'] }}</div>
             </div>
-    
-    
-            
-            <div class="pro">
-                <a href="\product9">
-                <img src="home/img/features/newRadicals.jpg" alt="">
-                <div class="des">
-                    <span>New Radicals</span>
-                </a>
-                    <h5>Maybe You've Been Brainwashed Too</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>£70</h4>
-                    <a href="#"><i class="fal fa-shopping cart"></i></a>
-                </div>
-            </div>
-    
-    
-            <div class="pro">
-                <a href="\product10">
-                    <img src="home/img/features/romance.jpg" alt="">
-                <div class="des">
-                    <span>Fontaines D.C.</span>
-                </a>
-                    <h5>Romance</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>£35</h4>
-                    <a href="#"><i class="fal fa-shopping cart"></i></a>
-                </div>
-            </div>
-    
-    
-    
-
-    
-            <div class="pro">
-                <a href="\product21">
-                <img src="home/img/features/wiped.jpg" alt="">
-                <div class="des">
-                    <span>The Neighbourhood</span>
-                </a>
-                    <h5>Wiped Out!</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>£20</h4>
-                    <a href="#"><i class="fal fa-shopping cart"></i></a>
-                </div>
-            </div>
-        </div>
-</section>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
 
 
 

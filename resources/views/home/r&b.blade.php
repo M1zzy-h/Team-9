@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <!-- !Glide.js Css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
-  <link rel="stylesheet" href="home/css/main.css" />
-  <title>E-Commerce | Home</title>
+  <link rel="stylesheet" href="{{ asset('home/css/main.css') }}" />
+  <title>E-Commerce | R&B</title>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
     <div class="container">
       <div class="campaign-wrapper">
         <h2>Category</h2>
-        <strong>R&B</strong>
+        <strong>R&amp;B</strong>
         <span></span>
         <a href="/shop" class="btn btn-lg">
           Back to main page
@@ -60,123 +60,28 @@
 
 
 
- 
   <section id="product1" class="section-p1">
-
-    <div class="pro-container">
-
-
-
-  <div class="pro">
-      <a href="\product15">
-      <img src="home/img/features/blond.jpg" alt="">
-      <div class="des">
-          <span>Frank Ocean</span>
-      </a>
-          <h5>Blonde</h5>
-          <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+    <div class="container">
+      <h2 class="section-title">R&B</h2>
+      <p class="section-description">Latest R&B Products</p>
+      <div class="product-grid">
+      @foreach($rbProducts as $id => $product)
+          <div class="product-card" onclick="window.location.href='{{ url('product/' . $id) }}';">
+            <div class="product-image">
+              <img src="{{ asset($product['image']) }}" alt="{{ $product['title'] }}">
+            </div>
+            <div class="product-details">
+              <h3 class="artist-name">{{ $product['artist'] }}</h3>
+              <h4 class="album-title">{{ $product['title'] }}</h4>
+              <div class="price">{{ $product['price'] }}</div>
+            </div>
           </div>
-          <h4>£200</h4>
-          <a href="#"><i class="fal fa-shopping cart"></i></a>
+        @endforeach
       </div>
-  </div>
+    </div>
+  </section>
 
-
-
-  <div class="pro">
-      <a href="\product17">
-      <img src="home/img/features/devine.jpg" alt="">
-      <div class="des">
-          <span>Mac Miller</span>
-      </a>
-          <h5>The Devine Femanine</h5>
-          <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <h4>£55</h4>
-          <a href="#"><i class="fal fa-shopping cart"></i></a>
-      </div>
-  </div>
-
-
-  <div class="pro">
-      <a href="\product18">
-      <img src="home/img/features/twistedFantasy.jpg" alt="">
-      <div class="des">
-          <span>Kanye West</span>
-      </a>
-          <h5>My Dark Twisted Fantasy</h5>
-          <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <h4>£30</h4>
-          <a href="#"><i class="fal fa-shopping cart"></i></a>
-      </div>
-  </div>
-
-
-  <div class="pro">
-      <a href="\product19">
-      <img src="home/img/features/gemini.jpg" alt="">
-      <div class="des">
-          <span>Steve Lacy</span>
-      </a>
-          <h5>Gemini Rights</h5>
-          <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <h4>£30</h4>
-          <a href="#"><i class="fal fa-shopping cart"></i></a>
-      </div>
-  </div>
-
-
-  <div class="pro">
-      <a href="\product20">
-      <img src="home/img/features/YE.jpg" alt="">
-      <div class="des">
-          <span>Kanye West</span>
-      </a>
-          <h5>YE [SIGNED]</h5>
-          <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-          </div>
-          <h4>£299</h4>
-          <a href="#"><i class="fal fa-shopping cart"></i></a>
-      </div>
-  </div>
-
-
-
-
-
- 
-    
-    
-
-    
-</section>
+  
 
 
 

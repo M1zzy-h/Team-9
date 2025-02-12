@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
   <!-- !Glide.js Css CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" />
-  <link rel="stylesheet" href="home/css/main.css" />
-  <title>E-Commerce | Home</title>
+  <link rel="stylesheet" href="{{ asset('home/css/main.css') }}" />
+  <title>E-Commerce | Jazz</title>
 </head>
 
 <body>
@@ -59,12 +59,26 @@
 
 
 
- 
   <section id="product1" class="section-p1">
-
-
-    <h1>Sorry! we dont have and jazz albums in stock right now.</h1>
-
+    <div class="container">
+      <h2 class="section-title">jazz</h2>
+      <p class="section-description">Latest jazz Products</p>
+      <div class="product-grid">
+      @foreach($jazzProducts as $id => $product)
+          <div class="product-card" onclick="window.location.href='{{ url('product/' . $id) }}';">
+            <div class="product-image">
+              <img src="{{ asset($product['image']) }}" alt="{{ $product['title'] }}">
+            </div>
+            <div class="product-details">
+              <h3 class="artist-name">{{ $product['artist'] }}</h3>
+              <h4 class="album-title">{{ $product['title'] }}</h4>
+              <div class="price">{{ $product['price'] }}</div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
+  </section>
 
 
  <!-- ! footer start -->

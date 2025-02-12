@@ -35,10 +35,10 @@
                 <div class="footer-contact-bottom">
                   <div class="download-app">
                     <a href="#">
-                      <img src="home/img/footer/app-store.png" alt="">
+                      <img src="{{ asset('home/img/footer/app-store.png') }}" alt="">
                     </a>
                     <a href="#">
-                      <img src="home/img/footer/google-play.png" alt="">
+                      <img src="{{ asset('home/img/footer/google-play.png') }}" alt="">
                     </a>
                   </div>
                   
@@ -48,19 +48,19 @@
           </div>
         </div>
         <div class="widgets-row">
-          <div class="container">
+          <div class="container-fluid">
             <div class="footer-widgets">
               <div class="brand-info">
                 <div class="footer-logo">
-                  <a href="#"><img src="home/img/logo.png" class="logo" alt=""></a>
+                  <a href="#"><img src="{{ asset('home/img/logo.png') }}" class="logo" alt=""></a>
                 </div>
                 <div class="footer-desc">
                   Do you have a question about your order? A complaint? Give us a call or email and we'll get back to you ASAP.
                 </div>
                 <div class="footer-contact">
                   <p>
-                    <a href="tel:123456789">0121XXXXX</a> -
-                    <a href="mailto:info@example.com">support@reallygreatvinylwebsite.com</a>
+                    <a class="footer-contact-link" href="tel:123456789">0121XXXXX</a> -
+                    <a class="footer-contact-link" href="mailto:info@example.com">support@reallygreatvinylwebsite.com</a>
                   </p>
                 </div>
               </div>
@@ -68,7 +68,7 @@
                 <h4>Information</h4>
                 <ul class="menu-list">
                   <li>
-                    <a href="#">About Us</a>
+                    <a href="\about">About Us</a>
                   </li>
                   <li>
                     <a href="#">Privacy Policy</a>
@@ -137,20 +137,18 @@
           </div>
         </div>
         <div class="copyright-row">
-          <div class="copyright-row">
-            <div class="container">
-              <div class="footer-copyright">
-                <div class="site-copyright">
-                  <p>
-                    Copyright 2024 © Group 9 CS Project
-                  </p>
-                </div>
-                
-                <div class="footer-menu">
-                  <ul class="footer-menu-list">
-                    
-                  </ul>
-                </div>
+          <div class="container-fluid">
+            <div class="footer-copyright">
+              <div class="site-copyright">
+                <p>
+                  Copyright 2024 © Group 9 CS Project
+                </p>
+              </div>
+              
+              <div class="footer-menu">
+                <ul class="footer-menu-list">
+                  
+                </ul>
               </div>
             </div>
           </div>
