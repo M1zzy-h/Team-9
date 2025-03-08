@@ -66,7 +66,7 @@
       <p class="section-description">Latest R&B Products</p>
       <div class="product-grid">
       @foreach($rbProducts as $id => $product)
-          <div class="product-card" onclick="window.location.href='{{ url('product/' . $id) }}';">
+          <div class="product-card" onclick="window.location.href='{{ url('product-' . $id) }}';">
             <div class="product-image">
               <img src="{{ asset($product['image']) }}" alt="{{ $product['title'] }}">
             </div>
