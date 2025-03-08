@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate & Review</title>
+    <link rel="stylesheet" href="reviewpage.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Rate & Review Product</h2>
+        <div class="stars">
+            <span onclick="rate(1)">&#9733;</span>
+            <span onclick="rate(2)">&#9733;</span>
+            <span onclick="rate(3)">&#9733;</span>
+            <span onclick="rate(4)">&#9733;</span>
+            <span onclick="rate(5)">&#9733;</span>
+        </div>
+        <textarea class="review-box" id="review" placeholder="Write your review..."></textarea>
+        <button onclick="submitReview()">Submit</button>
+        <div class="reviews" id="reviews"></div>
+    </div>
+
+    <script>
+        let selectedRating = 0;
+        function rate(stars) {
+            selectedRating = stars;
+            let starElements = document.querySelectorAll('.stars span');
+            starElements.forEach((star, index) => {
+                star.innerHTML = index < stars ? "&#9733;" : "&#9734;";
+            });
+        }
+
+        function submitReview() {
+            let reviewText = document.getElementById('review').value;
+            if (selectedRating === 0 || reviewText.trim() === "") {
+                alert("Please provide a rating and a review.");
+                return;
+            }
+            let reviewsContainer = document.getElementById('reviews');
+            let reviewEntry = document.createElement('div');
+            reviewEntry.innerHTML = `<p><strong>Rating:</strong> ${'★'.repeat(selectedRating)} (${selectedRating} Stars)</p><p><strong>Review:</strong> ${reviewText}</p><hr>`;
+            reviewsContainer.prepend(reviewEntry);
+            document.getElementById('review').value = "";
+            rate(0);
+        }
+    </script>
+</body>
+</html>
