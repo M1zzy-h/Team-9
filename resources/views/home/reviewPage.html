@@ -19,7 +19,7 @@
             
         </select>
     </div>
-    
+
     <div class="container">
         <h2>Rate & Review Product</h2>
         <div class="stars">
@@ -33,9 +33,9 @@
         <button onclick="submitReview()">Submit</button>
         <div class="reviews" id="reviews"></div>
     </div>
-
-    <script>
+  <script>
         let selectedRating = 0;
+
         function rate(stars) {
             selectedRating = stars;
             let starElements = document.querySelectorAll('.stars span');
@@ -50,13 +50,27 @@
                 alert("Please provide a rating and a review.");
                 return;
             }
+
             let reviewsContainer = document.getElementById('reviews');
             let reviewEntry = document.createElement('div');
             reviewEntry.innerHTML = `<p><strong>Rating:</strong> ${'★'.repeat(selectedRating)} (${selectedRating} Stars)</p><p><strong>Review:</strong> ${reviewText}</p><hr>`;
             reviewsContainer.prepend(reviewEntry);
+
             document.getElementById('review').value = "";
             rate(0);
         }
+
+        function searchAndFilter() {
+            let input = document.getElementById("orderSearch").value.toLowerCase();
+            let dropdown = document.getElementById("orderFilter");
+            let options = dropdown.getElementsByTagName("option");
+
+            for (let i = 0; i < options.length; i++) {
+                let text = options[i].textContent.toLowerCase();
+                options[i].style.display = text.includes(input) || options[i].value === "" ? "" : "none";
+            }
+        }
     </script>
+   
 </body>
 </html>
