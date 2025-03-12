@@ -1,0 +1,37 @@
+    <div class="sidebar">
+        <h3>Filter Records</h3>
+    
+        <div class="filter-group">
+            <button class="filter-toggle">Artist </button>
+            <div class="filter-options">
+                <input type="text" class="filter-search" placeholder="Search artist...">
+                <label><input type="checkbox" class="filter-checkbox" value="The Beatles"> Kendrick Lamar</label>
+                <label><input type="checkbox" class="filter-checkbox" value="Pink Floyd"> Lana Del Rey</label>
+                <label><input type="checkbox" class="filter-checkbox" value="David Bowie"> Nas</label>
+                <label><input type="checkbox" class="filter-checkbox" value="Nirvana"> Taylor Swift</label>
+            </div>
+        </div>
+    
+        
+        <div class="filter-group">
+            <button class="filter-toggle">Price Range </button>
+            <div class="filter-options">
+                <input type="range" id="priceRange" min="10" max="200" step="5" value="100" oninput="updatePrice()">
+                <p>Max Price: £<span id="priceValue">100</span></p>
+            </div>
+        </div>
+    
+        
+        <div class="filter-group">
+            <button class="filter-toggle">Availability </button>
+            <div class="filter-options">
+                <label><input type="checkbox" class="filter-checkbox" value="In Stock"> In Stock</label>
+                <label><input type="checkbox" class="filter-checkbox" value="Pre-Order"> Pre-Order</label>
+            </div>
+        </div>
+    
+        
+        <button class="apply-filters" onclick="applyFilters()">Apply Filters</button>
+    </div>
+    
+   
