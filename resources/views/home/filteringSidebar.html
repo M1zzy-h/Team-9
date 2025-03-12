@@ -127,4 +127,29 @@
         <button class="apply-filters" onclick="applyFilters()">Apply Filters</button>
     </div>
     
+    <script>
    
+        document.querySelectorAll('.filter-toggle').forEach(button => {
+            button.addEventListener('click', function() {
+                this.nextElementSibling.classList.toggle('active');
+            });
+        });
+    
+       
+        function updatePrice() {
+            document.getElementById('priceValue').textContent = document.getElementById('priceRange').value;
+        }
+    
+        function applyFilters() {
+            let selectedFilters = [];
+            document.querySelectorAll('.filter-checkbox:checked').forEach(checkbox => {
+                selectedFilters.push(checkbox.value);
+            });
+    
+            let maxPrice = document.getElementById('priceRange').value;
+            console.log("Filters Applied:", selectedFilters, "Max Price:", maxPrice);
+            
+            
+        }
+    </script>
+    
