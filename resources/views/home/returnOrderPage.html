@@ -30,6 +30,13 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <script>
+        document.getElementById("returnForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your return request has been submitted successfully.");
+            window.location.href = "order.html";
+        });
+    </script>
 </body>
 </html>
 
