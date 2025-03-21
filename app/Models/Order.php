@@ -16,6 +16,7 @@ class Order extends Model
         'email',
         'phone',
         'address',
+        'total_amount',
         'product_title',
         'product_quantity',
         'price',
@@ -24,9 +25,14 @@ class Order extends Model
         'payment_status',
         'delivery_status'
     ];
-
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    
+    //return items for order
+    public function items()
+    {
+        return $this ->hasMany(OrderItem::class);
     }
 }
