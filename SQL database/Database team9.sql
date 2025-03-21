@@ -40,8 +40,8 @@ CREATE TABLE Products (
     Status ENUM('active', 'inactive') DEFAULT 'active',
     FOREIGN KEY (CategoryID) REFERENCES ProductCategories(CategoryID) ON DELETE CASCADE,
     FOREIGN KEY (ArtistID) REFERENCES Artists(ArtistID) ON DELETE CASCADE,
-    INDEX idx_product_name (ProductName),
-    INDEX idx_product_category (CategoryID),
+    INDEX idx_album_title (AlbumTitle),
+    INDEX idx_product_category (CategoryID)
 );
 
 CREATE TABLE Orders (
@@ -83,7 +83,7 @@ CREATE TABLE ShoppingCart (
     DateAdded DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE CASCADE,
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID) ON DELETE CASCADE,
-    UNIQUE KEY unique_cart_item (UserID, ProductID, VariantID),
+    UNIQUE KEY unique_cart_item (UserID, ProductID),
     INDEX idx_cart_user (UserID)
 );
 
@@ -121,11 +121,10 @@ CREATE TABLE InventoryTransactions (
     TransactionType ENUM('incoming', 'outgoing') NOT NULL,
     Quantity INT NOT NULL,
     TransactionDate DATETIME DEFAULT CURRENT_TIMESTAMP,
-    ReferenceID VARCHAR(50), -- OrderID for outgoing, PurchaseID for incoming
-    SupplierInfo VARCHAR(255), -- For incoming inventory
+    ReferenceID VARCHAR(50),
+    SupplierInfo VARCHAR(255), 
     Notes TEXT,
     FOREIGN KEY (ProductID) REFERENCES Products(ProductID) ON DELETE CASCADE,
-    FOREIGN KEY (VariantID) REFERENCES ProductVariants(VariantID) ON DELETE SET NULL,
     INDEX idx_transaction_product (ProductID),
     INDEX idx_transaction_date (TransactionDate),
     INDEX idx_transaction_type (TransactionType)
