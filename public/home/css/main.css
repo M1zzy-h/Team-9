@@ -43,6 +43,8 @@ body {
     background-color: var(--bg-color);
 }
 
+
+
 .section-p1 {
     padding: 40px 80px;
     
@@ -119,14 +121,14 @@ body {
 .remove-btn {
     background: none;
     border: none;
-    color: #ff0000;
+    color: #088178;
     cursor: pointer;
     padding: 5px;
     transition: color 0.2s;
 }
 
 .remove-btn:hover {
-    color: #cc0000;
+    color: #088178;
 }
 
 .product-remove {
@@ -268,7 +270,7 @@ label {
 
 .price {
     font-size: 1.2rem;
-    color: #2ecc71;
+    color: #088178;
     font-weight: bold;
 }
 
@@ -289,4 +291,26 @@ label {
     .product-details {
         padding: 15px;
     }
+}
+
+/* Add these styles to your existing CSS */
+.ms-3.relative {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.dropdown-content.show {
+    display: block;
 }

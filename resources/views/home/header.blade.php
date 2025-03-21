@@ -1,6 +1,8 @@
+
   <!--header-->
   <header>
-    
+
+
     <div class="header-row">
       <div class="container">
         <div class="header-wrapper">
@@ -16,15 +18,15 @@
                 
                 
                 <li class="menu-list-item">
-                  <a href="/" class="menu-link">Home
+                  <a href="{{ route('index') }}" class="menu-link">Home
                   </a>
                 </li>
                 <li class="menu-list-item">
-                  <a href="/shop" class="menu-link">Shop
+                  <a href="{{ route('shop') }}" class="menu-link">Shop
                   </a>
                 </li>
                 <li class="menu-list-item">
-                  <a href="/contact" class="menu-link">Contact</a>
+                  <a href="{{ route('contact') }}" class="menu-link">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -35,9 +37,6 @@
               <button class="theme-toggle" id="theme-toggle">
                   <i class="bi bi-sun"></i>
               </button>
-              <a href="/account">
-                <i class="bi bi-person"></i>
-              </a>
               <button class="search-button">
                 <i class="bi bi-search"></i>
               </button>
@@ -47,11 +46,32 @@
                   <span class="header-cart-count">0</span>
                 </a>
               </div>
+              @if (Route::has('login'))
+                            
+                                @auth
+                                
+                                <x-app-layout>
+                              </x-app-layout>
+                                 
+
+                                @else
+                                
+                                <a href="{{ route('login') }}" class="">
+                                  login</a>
+                                
+                                   
+                                
+                                <a href="{{ route('register') }}" class="">
+                                  register</a>
+                                
+                                @endauth
+                        @endif
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   </header>
 
   

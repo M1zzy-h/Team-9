@@ -1,4 +1,33 @@
-/* ! modal search start */
+
+:root {
+    --background-color: #fff; 
+    --text-color: #000; 
+    --modal-background: #f9f9f9; 
+    --border-color: #dee0ea; 
+}
+
+[data-theme="dark"] {
+    --background-color: #333;
+    --text-color: #fff; 
+    --modal-background: #444; 
+    --border-color: #555; 
+}
+
+.modal-wrapper .search {
+    display: flex; 
+    align-items: center; 
+}
+
+.modal-wrapper .search input {
+    width: 90%; 
+    margin-right: 10px; 
+}
+
+.modal-wrapper .search button {
+    width: 10%; 
+    padding: 10px; 
+}
+
 .modal-search {
     position: absolute;
     top: 0;
@@ -12,53 +41,41 @@
     z-index: 999;
     opacity: 0;
     transition: 0.3s ease all;
+    background-color: var(--background-color);
 }
 
 .modal-search::after {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #000;
-    position: fixed;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-wrapper {
     max-width: 800px;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--modal-background);
     z-index: 10;
     position: fixed;
     padding: 30px;
+    border: 1px solid var(--border-color);
 }
-
 
 .modal-search .modal-title {
     font-size: 30px;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .modal-search .modal-text {
     font-size: 14px;
-    color: #7a7a7a;
+    color: #7a7a7a; /* Light mode text color */
     padding-bottom: 15px;
-    border-bottom: 1px solid #dee0ea;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.modal-wrapper .search {
-    display: flex;
-}
-
-
-.modal-wrapper .search input {
-    width: 90%;
-}
-
-.modal-wrapper .search button {
-    width: 10%;
-
+[data-theme="dark"] .modal-search .modal-text {
+    color: #ccc; /* Dark mode text color */
 }
 
 .modal-search .search-form {
@@ -71,15 +88,24 @@
     content: "";
     width: 100%;
     height: 1px;
-    background-color: #dee0ea;
+    background-color: var(--border-color);
     position: absolute;
     bottom: -15px;
 }
 
-.modal-search .search-form input {
+.modal-search .search input{
     width: 100%;
     max-height: 42px;
-    border-color: #dee0ea !important;
+    border-color: var(--border-color);
+    color: var(--text-color); /* Set text color for input */
+    background-color: var(--modal-background);
+    padding: 10px; /* Add some padding for better appearance */
+    border-radius: 4px; /* Optional: Add border radius for rounded corners */
+}
+
+[data-theme="dark"] .modal-search .search input{
+    color: var(--text-color); /* Ensure text color is visible in dark mode */
+    background-color: var(--modal-background); /* Ensure background is set */
 }
 
 .modal-search .search-form button {
@@ -90,13 +116,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #dee0ea;
-    background-color: #fff;
+    border: 1px solid var(--border-color);
+    background-color: var(--modal-background);
 }
 
 .modal-search .search-form button i {
     font-size: 18px;
-    color: #7a7a7a;
+    color: #7a7a7a; /* Light mode icon color */
+}
+
+[data-theme="dark"] .modal-search .search-form button i {
+    color: #ccc; /* Dark mode icon color */
 }
 
 .modal-search .search-result {
@@ -106,35 +136,44 @@
 .modal-search .search-heading {
     background-color: #f9f9f9;
     padding: 15px;
-    border: 1px solid #dee0ea;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .modal-search .search-heading {
+    background-color: #555; /* Dark mode heading background */
 }
 
 .modal-search .search-heading h3 {
     font-size: 16px;
     font-weight: 600;
-
+    color: var(--text-color);
 }
 
 .modal-search .results {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-left: 1px solid #dee0ea;
+    border-left: 1px solid var(--border-color);
+    max-height: 400px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .modal-search .result-item {
     display: flex;
     align-items: center;
     padding: 15px;
-    border-right: 1px solid #dee0ea;
-    border-bottom: 1px solid #dee0ea;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     column-gap: 15px;
 }
 
 .modal-search .result-item:hover {
     background-color: #f9f9f9;
-    transition: backgrund-color .2s ease;
+    transition: background-color .2s ease;
 }
 
+[data-theme="dark"] .modal-search .result-item:hover {
+    background-color: #666; /* Dark mode hover background */
+}
 
 .modal-search .search-thumb {
     max-width: 65px;
@@ -154,7 +193,7 @@
 
 .modal-search .search-price {
     font-weight: 600;
-    color: #dc3545;
+    color: #088178;
 }
 
 .modal-search .bi-x-circle {
@@ -164,7 +203,5 @@
     font-size: 20px;
     cursor: pointer;
 }
-
-
 
 /* ! modal search end */

@@ -1,87 +1,347 @@
 [
     {
         "id": 1,
-        "name": "Analogue Resin Strap",
-        "price": {
-            "oldPrice": 160.00,
-            "newPrice": 108.00
-        },
-        "discount": 22,
-        "img": {
-            "singleImage": "img/products/product1/1.png",
-            "thumbs": [
-                "img/products/product1/1.png",
-                "img/products/product1/2.png",
-                "img/products/product1/3.png"
-            ]
+        "title": "1999",
+        "artist": "Prince",
+        "image": "home\/img\/product images\/1999.jpg",
+        "price": "\u00a324.99",
+        "category": "pop",
+        "description": "Originally released in 1982, 1999 is Prince breakthrough album, a five-time platinum-certified record that established him as one of the most singular talents of his generation.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Warner Records",
+            "Item model number": "517786",
+            "Original Release Date": "1982",
+            "Label": "Warner Records",
+            "Country of origin": "United Kingdom",
+            "Number of discs": "1"
         }
     },
     {
         "id": 2,
-        "name": "Ridley High Waist",
-        "price": {
-            "oldPrice": 265.00,
-            "newPrice": 208.00
-        },
-        "discount": 33,
-        "img": {
-            "singleImage": "img/products/product2/1.png",
-            "thumbs": [
-                "img/products/product2/1.png",
-                "img/products/product2/2.png",
-                "img/products/product2/3.png"
-            ]
+        "image": "home\/img\/product images\/rumours.jpg",
+        "artist": "Fleetwood Mac",
+        "title": "Rumours",
+        "price": "\u00a324.99",
+        "category": "pop",
+        "description": "On February 4th 1977, after a year of recording through hedonism, scandal and relationship break-ups the British-American rock band Fleetwood Mac released their eleventh studio album, Rumours.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Warner Records",
+            "Item model number": "517786",
+            "Original Release Date": "1977",
+            "Label": "Warner Records",
+            "Country of origin": "United Kingdom",
+            "Number of discs": "1"
         }
     },
     {
         "id": 3,
-        "name": "Blush Beanie",
-        "price": {
-            "oldPrice": 105.00,
-            "newPrice": 67.00
-        },
-        "discount": 90,
-        "img": {
-            "singleImage": "img/products/product3/1.png",
-            "thumbs": [
-                "img/products/product3/1.png",
-                "img/products/product3/2.png",
-                "img/products/product3/3.png"
-            ]
+        "image": "home\/img\/product images\/borntodie.jpg",
+        "artist": "Lana Del Rey",
+        "title": "Born To Die",
+        "price": "\u00a324.99",
+        "category": "pop",
+        "description": "Highly anticipated 2012 debut album from the New York-based singer, songwriter and performer. She has described herself as a \"gangsta Nancy Sinatra\" and cites Britney Spears, Thomas Newman and Bruce Springsteen as her musical influences.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Polydor",
+            "Item model number": "28930756",
+            "Original Release Date": "2012",
+            "Label": "Polydor",
+            "Country of origin": "United Kingdom",
+            "Number of discs": "1"
         }
     },
     {
         "id": 4,
-        "name": "Mercury Tee",
-        "price": {
-            "oldPrice": 55.00,
-            "newPrice": 48.00
-        },
-        "discount": 40,
-        "img": {
-            "singleImage": "img/products/product4/1.png",
-            "thumbs": [
-                "img/products/product4/1.png",
-                "img/products/product4/2.png",
-                "img/products/product4/3.png"
-            ]
+        "image": "home\/img\/product images\/callmeifyougetlost.jpg",
+        "artist": "Tyler, The Creator",
+        "title": "Call Me If You Get Lost",
+        "price": "\u00a329.99",
+        "category": "rock",
+        "description": "Sixth studio album by the American rapper, featuring Pharrell Williams, Brent Faiyaz and Lil Wayne. The album includes the previously-released songs 'Lumberjack' and 'Wusyaname' as well as 'Juggernaut'.",
+        "details": {
+            "Product Dimensions": "31.24 x 0.76 x 30.73 cm; 498.95 g",
+            "Manufacturer": "Columbia",
+            "Item model number": "2022-04-15",
+            "Original Release Date": "2021",
+            "Label": "Columbia",
+            "Country of origin": "United States",
+            "Number of discs": "2"
         }
     },
     {
         "id": 5,
-        "name": "La Bohème Rose Gold",
-        "price": {
-            "oldPrice": 78.00,
-            "newPrice": 48.00
-        },
-        "discount": 40,
-        "img": {
-            "singleImage": "img/products/product5/1.png",
-            "thumbs": [
-                "img/products/product5/1.png",
-                "img/products/product5/2.png",
-                "img/products/product5/3.png"
-            ]
+        "image": "home\/img\/product images\/igor.jpg",
+        "artist": "Tyler, The Creator",
+        "title": "IGOR",
+        "price": "\u00a324.99",
+        "category": "rock",
+        "description": "IGOR is the fifth studio album by American rapper and producer Tyler, The Creator. It was released on May 17, 2019, through Columbia Records.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Columbia",
+            "Item model number": "19075904831",
+            "Original Release Date": "2019",
+            "Label": "Columbia",
+            "Country of origin": "United States",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 6,
+        "image": "home\/img\/product images\/1989.jpg",
+        "artist": "Taylor Swift",
+        "title": "1989 (Taylor's Version)",
+        "price": "\u00a329.99",
+        "category": "pop",
+        "description": "The re-recorded version of Taylor Swift's fifth studio album, featuring all songs from the deluxe edition of 1989 plus previously unreleased songs from The Vault.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Republic Records",
+            "Original Release Date": "2023",
+            "Label": "Republic Records",
+            "Country of origin": "United States",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 7,
+        "image": "home\/img\/product images\/currents.jpg",
+        "artist": "Tame Impala",
+        "title": "Currents",
+        "price": "\u00a324.99",
+        "category": "indie",
+        "description": "Third studio album by Australian musical project Tame Impala, released on 17 July 2015. It was recorded, produced, and mixed by Kevin Parker.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Interscope Records",
+            "Original Release Date": "2015",
+            "Label": "Interscope Records",
+            "Country of origin": "Australia",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 8,
+        "image": "home\/img\/product images\/innerspeaker.jpg",
+        "artist": "Tame Impala",
+        "title": "Innerspeaker",
+        "price": "\u00a324.99",
+        "category": "indie",
+        "description": "Debut studio album by Australian musical project Tame Impala. It was released on 21 May 2010.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Modular Recordings",
+            "Original Release Date": "2010",
+            "Label": "Modular Recordings",
+            "Country of origin": "Australia",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 9,
+        "image": "home\/img\/product images\/lonerism.jpg",
+        "artist": "Tame Impala",
+        "title": "Lonerism",
+        "price": "\u00a324.99",
+        "category": "indie",
+        "description": "Second studio album by the Australian musical project Tame Impala, released on 5 October 2012.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Modular Recordings",
+            "Original Release Date": "2012",
+            "Label": "Modular Recordings",
+            "Country of origin": "Australia",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 10,
+        "image": "home\/img\/product images\/darktwistedfantasy.jpg",
+        "artist": "Kanye West",
+        "title": "My Beautiful Dark Twisted Fantasy",
+        "price": "\u00a334.99",
+        "category": "hiphop",
+        "description": "Fifth studio album by American rapper and producer Kanye West. It was released on November 22, 2010, by Def Jam Recordings and Roc-A-Fella Records.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Def Jam",
+            "Original Release Date": "2010",
+            "Label": "Def Jam",
+            "Country of origin": "United States",
+            "Number of discs": "3"
+        }
+    },
+    {
+        "id": 11,
+        "image": "home\/img\/product images\/2014foresthill.jpg",
+        "artist": "J Cole",
+        "title": "2014 Forest Hills Drive",
+        "price": "\u00a324.99",
+        "category": "hiphop",
+        "description": "Third studio album by American rapper J. Cole. It was released on December 9, 2014, by ByStorm Entertainment, Columbia Records, Dreamville Records and Roc Nation.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Columbia",
+            "Original Release Date": "2014",
+            "Label": "Columbia",
+            "Country of origin": "United States",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 12,
+        "image": "home\/img\/product images\/mmlp.jpg",
+        "artist": "Eminem",
+        "title": "The Marshall Mathers LP",
+        "price": "\u00a324.99",
+        "category": "hiphop",
+        "description": "Second major-label studio album by American rapper Eminem, released on May 23, 2000, by Aftermath Entertainment and Interscope Records.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Interscope",
+            "Original Release Date": "2000",
+            "Label": "Interscope",
+            "Country of origin": "United States",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 13,
+        "image": "home\/img\/product images\/graduation.jpg",
+        "artist": "Kanye West",
+        "title": "Graduation",
+        "price": "\u00a324.99",
+        "category": "hiphop",
+        "description": "Third studio album by American rapper Kanye West, released on September 11, 2007, through Def Jam Recordings and Roc-A-Fella Records.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Def Jam",
+            "Original Release Date": "2007",
+            "Label": "Def Jam",
+            "Country of origin": "United States",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 14,
+        "image": "home\/img\/product images\/illmatic.jpg",
+        "artist": "Nas",
+        "title": "Illmatic",
+        "price": "\u00a324.99",
+        "category": "hiphop",
+        "description": "Debut studio album by American rapper Nas. It was released on April 19, 1994, by Columbia Records.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Columbia",
+            "Original Release Date": "1994",
+            "Label": "Columbia",
+            "Country of origin": "United States",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 15,
+        "image": "home\/img\/product images\/blonde.jpg",
+        "artist": "Frank Ocean",
+        "title": "Blonde",
+        "price": "\u00a324.99",
+        "category": "r&b",
+        "description": "Second studio album by American singer Frank Ocean. It was released on August 20, 2016.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Boys Don't Cry",
+            "Original Release Date": "2016",
+            "Label": "Boys Don't Cry",
+            "Country of origin": "United States",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 16,
+        "image": "home\/img\/product images\/channel orange.jpg",
+        "artist": "Frank Ocean",
+        "title": "Channel Orange",
+        "price": "\u00a324.99",
+        "category": "r&b",
+        "description": "Debut studio album by American singer Frank Ocean. It was released on July 10, 2012, by Def Jam Recordings.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Def Jam",
+            "Original Release Date": "2012",
+            "Label": "Def Jam",
+            "Country of origin": "United States",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 17,
+        "image": "home\/img\/product images\/amsp.jpg",
+        "artist": "Radiohead",
+        "title": "A Moon Shaped Pool",
+        "price": "\u00a324.99",
+        "category": "rock",
+        "description": "Ninth studio album by the English rock band Radiohead. It was released digitally on 8 May 2016.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "XL Recordings",
+            "Original Release Date": "2016",
+            "Label": "XL Recordings",
+            "Country of origin": "United Kingdom",
+            "Number of discs": "2"
+        }
+    },
+    {
+        "id": 18,
+        "image": "home\/img\/product images\/dogrel.jpg",
+        "artist": "Fontaines D.C.",
+        "title": "Dogrel",
+        "price": "\u00a324.99",
+        "category": "indie",
+        "description": "Debut studio album by Irish post-punk band Fontaines D.C., released on 12 April 2019 through Partisan Records.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Partisan Records",
+            "Original Release Date": "2019",
+            "Label": "Partisan Records",
+            "Country of origin": "Ireland",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 19,
+        "image": "home\/img\/product images\/geminirights.jpg",
+        "artist": "Steve Lacy",
+        "title": "Gemini Rights",
+        "price": "\u00a324.99",
+        "category": "r&b",
+        "description": "Second studio album by American singer Steve Lacy, released through RCA Records on July 15, 2022.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "RCA Records",
+            "Original Release Date": "2022",
+            "Label": "RCA Records",
+            "Country of origin": "United States",
+            "Number of discs": "1"
+        }
+    },
+    {
+        "id": 20,
+        "image": "home\/img\/product images\/yesigned.jpg",
+        "artist": "Kanye West",
+        "title": "YE [SIGNED]",
+        "price": "\u00a324.99",
+        "category": "rock",
+        "description": "Eighth studio album by American rapper Kanye West. It was released on June 1, 2018, through GOOD Music and Def Jam Recordings.",
+        "details": {
+            "Product Dimensions": "31.39 x 31.39 x 0.79 cm; 235.87 g",
+            "Manufacturer": "Def Jam",
+            "Original Release Date": "2018",
+            "Label": "Def Jam",
+            "Country of origin": "United States",
+            "Number of discs": "1"
         }
     }
 ]

@@ -41,8 +41,8 @@
   <section class="campaign-single">
     <div class="container">
       <div class="campaign-wrapper">
-        <h2>Category</h2>
-        <strong>Indie</strong>
+        <h2 class="campaingn-component-title">Category</h2>
+        <strong class="campaingn-component-title">Indie</strong>
         <span></span>
         <a href="/shop" class="btn btn-lg">
           Back to main page <i class="bi bi-arrow-right"></i>
@@ -53,7 +53,6 @@
 
   <section id="product1" class="section-p1">
     <div class="container">
-      <h2 class="section-title">Indie</h2>
       <p class="section-description">Latest Indie Products</p>
       <div class="product-grid">
       @foreach($indieProducts as $id => $product)

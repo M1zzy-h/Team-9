@@ -82,3 +82,29 @@
 .contact-info .contact-date {
     margin-top: 15px;
 }
+
+.contact-bottom .contact-form input,
+.contact-bottom .contact-form textarea {
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.contact-bottom .contact-form input::placeholder,
+.contact-bottom .contact-form textarea::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.contact-bottom .contact-form label {
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.contact-bottom .contact-info-item h3,
+.contact-bottom .contact-info-item p,
+.contact-bottom .contact-info-item .contact-streets,
+.contact-bottom .contact-date {
+    color: var(--text-color);
+}

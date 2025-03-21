@@ -50,6 +50,7 @@ p {
 button {
     cursor: pointer;
     border: none;
+    
 }
 
 .btn {
@@ -80,9 +81,9 @@ button {
 }
 
 .btn-red {
-    background-color: #ee403d;
+    background-color: #088178;;
     color: #fff;
-    border-color: #ee403d
+    border-color: #088178;;
 }
 
 .btn-black {
@@ -97,7 +98,7 @@ button {
 }
 
 .btn-submit {
-    background-color: #000;
+    background-color: #088178;;
     color: #fff;
     cursor: pointer;
     padding: 0 40px;
@@ -128,6 +129,7 @@ textarea:focus {
 
 input[type="number"]::-webkit-inner-spin-button {
     opacity: 1;
+    
 }
 
 .img-fluid {

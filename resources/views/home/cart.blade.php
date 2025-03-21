@@ -84,7 +84,7 @@
                             </tbody>
                         </table>
                         <div class="checkout">
-                            <button class="btn btn-lg btn-red">Proceed to checkout</button>
+                            <a href="{{url('checkout')}}"class="btn btn-lg btn-red">Proceed to checkout</a>
                         </div>
                     </div>
                 </div>

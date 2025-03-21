@@ -10,3 +10,25 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+
+[data-theme="dark"] .favContainer input[type="checkbox"] {
+    accent-color: #e51414; /* Change checkbox color in dark mode */
+}
+
+[data-theme="dark"] .favContainer label {
+    color: #444;
+    background-color: #1a1a1a; /* Label color in dark mode */
+}
+
+/* Input quantity styles */
+[data-theme="dark"] .variations-form input[type="number"] {
+    background-color: #444; /* Dark mode background for input */
+    color: #fff; /* Text color in dark mode */
+    border: 1px solid #777; /* Border color in dark mode */
+}
+
+[data-theme="dark"] .variations-form input[type="number"]::placeholder {
+    color: #ccc; /* Placeholder color in dark mode */
+}
