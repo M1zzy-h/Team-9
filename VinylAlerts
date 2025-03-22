@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rare Vinyl Alerts Sign-Up</title>
+  
+</head>
+
+<body>
+
+  <div class="signup-container">
+    <h2> Rare Vinyl Alerts</h2>
+    <p>Never miss a rare record again</p>
+    <form id="alertForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name"  required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email"  required>
+
+      <button type="submit">Notify Me</button>
+    </form>
+    <p class="disclaimer"> Unsubscribe anytime.</p>
+  </div>
+
+
+  <div class="modal" id="thankYouModal">
+    <div class="modal-content">
+      <h3>Thank you!</h3>
+      <p>You're now on the list for rare vinyl alerts</p>
+    </div>
+  </div>
+
+</body>
+
+</html>
