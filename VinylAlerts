@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rare Vinyl Alerts Sign-Up</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #e0f7f5, #ffffff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .signup-container {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      border: 1px solid #01a09533;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      color: #01a095;
+      margin-bottom: 0.5rem;
+    }
+
+    .signup-container p {
+      text-align: center;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .signup-container label {
+      display: block;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .signup-container input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      background-color: #f9fafa;
+      font-size: 0.95rem;
+      transition: border-color 0.3s;
+    }
+
+    .signup-container input:focus {
+      outline: none;
+      border-color: #01a095;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 0.85rem;
+      background-color: #01a095;
+      color: #ffffff;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.75rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+      font-size: 1rem;
+    }
+
+    .signup-container button:hover {
+      background-color: #01887f;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .signup-container .disclaimer {
+      font-size: 0.75rem;
+      text-align: center;
+      color: #888;
+      margin-top: 1rem;
+    }
+
+    /* Modal Styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.4s ease;
+    }
+
+    .modal-content h3 {
+      color: #01a095;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-content p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9);}
+      to { opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="signup-container">
+    <h2> Rare Vinyl Alerts</h2>
+    <p>Never miss a rare record again</p>
+    <form id="alertForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name"  required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email"  required>
+
+      <button type="submit">Notify Me</button>
+    </form>
+    <p class="disclaimer"> Unsubscribe anytime.</p>
+  </div>
+
+
+  <div class="modal" id="thankYouModal">
+    <div class="modal-content">
+      <h3>Thank you!</h3>
+      <p>You're now on the list for rare vinyl alerts</p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('alertForm');
+    const modal = document.getElementById('thankYouModal');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      modal.style.display = 'flex'; // show modal
+
+      // Simulate processing and redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = '/'; // Redirect to homepage
+      }, 2000);
+    });
+  </script>
+
+</body>
+
+</html>
