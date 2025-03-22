@@ -159,6 +159,20 @@
     </div>
   </div>
 
+ <script>
+    const form = document.getElementById('alertForm');
+    const modal = document.getElementById('thankYouModal');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      modal.style.display = 'flex'; // show modal
+
+      // Simulate processing and redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = '/'; // Redirect to homepage
+      }, 2000);
+    });
+  </script>
 </body>
 
 </html>
