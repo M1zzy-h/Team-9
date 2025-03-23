@@ -45,7 +45,7 @@ Emerald Vinyl is a music-focused web application designed to help users explore,
 - The system will allow authorized users (admin) to add, edit or remove products to /from the inventory through the website.
 - The system will allow authorized users (admin) to initiate and process an incoming order in a friendly way. Following this entry, the stock level will be automatically updated
 
-## 🛠 Built With
+## Built With
 - **Frontend:** HTML, CSS (Bootstrap/Tailwind)
 - **Backend:** PHP, Laravel Framework
 - **Database:** SQL, phpAdmin
