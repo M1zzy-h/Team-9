@@ -2,12 +2,31 @@ body {
     background-color: #f8f9fa;
 }
 
+.returnspic {
+    /*the forst message users will see*/
+    position: relative;
+   ;
+    display: flex;
+    /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 
+    
+    background: url('https://truongphuocplastic.com/wp-content/uploads/2024/03/AnyConv.com__z5254845486386_d79f9954473a78671c56227377bbfc3e.webp') no-repeat center center/cover;
+     align-items: center;
+
+    flex-direction: column;
+    
+margin-left: 710px;
+height: 320px;
+width: 450px;
+margin-top: -300px;
+
+
+}
 
 .returnspolicy-message  h2{
     /*the forst message users will see*/
     position: relative;
-    height: 100px;
+    height: 200px;
     display: flex;
     /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
@@ -108,25 +127,7 @@ h3 {
 
 
 
-.returnspic {
-    /*the forst message users will see*/
-    position: relative;
-   ;
-    display: flex;
-    /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
-padding: 5%;
-    
-    background: url('https://img.freepik.com/premium-vector/return-policy-landing-page-template-dissatisfied-customer-male-character-call-support-service-complain-broken-goods-delivery-exchange-damaged-things-shop-cartoon-people-vector-illustration_87771-19239.jpg') no-repeat center center/cover;
-     align-items: center;
-   
-    flex-direction: column;
-    color: #ffffff;
-margin-left: 700px;
-height: 400px;
-width: 410px;
-margin-top: -470px;
 
-}
 
 
    
@@ -170,7 +171,7 @@ padding: 5%;
 .returnprocesspic {
    /*the forst message users will see*/
    position: relative;
-   height:145px;
+   height:200px;
    display: flex;
    /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
@@ -908,46 +909,6 @@ input[type="number"]::-webkit-inner-spin-button {
         max-width: 350px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

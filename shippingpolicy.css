@@ -1,3 +1,14 @@
+#all  {
+    margin: initial ;
+    padding: initial ;
+    box-sizing: initial ;
+    height: auto;
+   
+}
+
+
+
+
 body {
     background-color: #f8f9fa;
 }
@@ -6,7 +17,7 @@ body {
 .shippingpolicy-message {
     /*the forst message users will see*/
     position: relative;
-    height: 100px;
+    height: 200px;
     display: flex;
     /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
@@ -58,7 +69,7 @@ h3 {
 
    
 
-
+  
 
 
 
@@ -138,9 +149,9 @@ h3 {
 
    /*the forst message users will see*/
    position: relative;
-   height: 100px;
+   height: 200px;
    
-   width: 820px;
+   width: 900px;
 margin-left: 150px;
 margin-top: 50px;
    display: flex;
@@ -871,135 +882,6 @@ input[type="number"]::-webkit-inner-spin-button {
         max-width: 350px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

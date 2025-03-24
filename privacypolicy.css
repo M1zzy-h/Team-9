@@ -7,13 +7,13 @@ body {
 .privacypolicy {
     /*the forst message users will see*/
     position: relative;
-    height: 100px;
+    height: 200px;
     display: flex;
     /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
     margin: 0%;
      background: url('https://www.nueclear.com/assets/images/privacy-policy-banner-nueclear.jpg') no-repeat center center/cover;
-    /*our  background pic of the vinyl */
+   
      align-items: center;
    
     justify-content: center;
@@ -135,7 +135,7 @@ margin-bottom: 50px;
 }
 .dataprocessingpic{
     position: relative;
-    height: 100px;
+    height: 200px;
     display: flex;
     /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
@@ -169,7 +169,7 @@ padding: 5%;
 
 .security-pic{
     position: relative;
-    height: 100px;
+    height: 200px;
     display: flex;
     /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
@@ -190,7 +190,7 @@ padding: 5%;
 
 .communication-pic{
     position: relative;
-    height: 100px;
+    height: 200px;
     display: flex;
     /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
 padding: 5%;
@@ -213,9 +213,9 @@ padding: 5%;
 
 .rightspic{
     position: relative;
-    height: 150px;
+    height: 200px;
     display: flex;
-    /*impo for te 2 seperate texts to be underneath eachother collumn style instead of 1 big line */
+   
     padding: 20px;
     margin: 0%;
      background: url('https://www.shutterstock.com/image-vector/dark-teal-green-minimal-banner-600nw-2447924575.jpg') no-repeat center center/cover;
@@ -1003,31 +1003,6 @@ input[type="number"]::-webkit-inner-spin-button {
         max-width: 350px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
