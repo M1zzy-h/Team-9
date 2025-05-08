@@ -1,6 +1,6 @@
 # Emerald Vinyl
 
-Emerald Vinyl is a music-focused web application designed to help users explore, manage, and purchase vinyl records seamlessly. Built using **HTML, CSS, PHP, JavaScript and Laravel**, this platform provides an intuitive and engaging experience for music enthusiasts.
+Emerald Vinyl is a music-focused web application designed to help users explore, manage, and purchase vinyl records seamlessly. Built using **HTML, CSS, PHP, JavaScript and Laravel**, this platform provides an intuitive and engaging experience for music enthusiasts
 
 ## Features include 
 - A home page. 
